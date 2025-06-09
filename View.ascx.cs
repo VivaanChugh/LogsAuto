@@ -145,16 +145,33 @@ namespace Vivaan.Modules.LogsAuto
                 errors.Add("Application Tag Error (Missing)");
 
             // 10. OS Integrated = Yes
-            if ((!Get("OS_Integrated_Status").Equals("Integrated", StringComparison.OrdinalIgnoreCase)) && !(Get("OS_Integrated_Status").Equals("Not Applicable", StringComparison.OrdinalIgnoreCase)))
-                errors.Add("OS Integrated Status");
+            if ((!Get("OS_Integrated_Status").Equals("Integrated")) && !(Get("OS_Integrated_Status").Equals("Not Applicable")))
+                errors.Add($"OS Integrated Status (Found: {Get("OS_Integrated_Status")})");
 
-            // 11. Source Received = Yes
-            if (!Get("source_recieved").Equals("Yes", StringComparison.OrdinalIgnoreCase))
-                errors.Add("Source Received");
+            // 11. Freshness of Log Date
+            string logDateStr = Get("lastLogRecieved");
 
-            // 12. Source Required = Yes
-            if (!Get("source_required").Equals("Yes", StringComparison.OrdinalIgnoreCase))
-                errors.Add("Source Required");
+            DateTime thisDay = DateTime.Today;
+
+            // Parse the log string (known to be in d/M/yyyy format)
+            DateTime logDate = DateTime.Parse(logDateStr);
+
+            // Compare dates directly
+            if (logDate.Date != thisDay)
+            {
+                // Format for readable output (optional)
+                string formattedLogDate = logDate.ToString("M/d/yyyy");
+                string formattedToday = thisDay.ToString("M/d/yyyy");
+
+                errors.Add($"Freshness of Log Date Error (Found: Log Date = {formattedLogDate}, Expected = {formattedToday})");
+            }
+
+
+            // 12. Field Completeness
+            if ((hostName == null || hostName == " ") || (hostIP == null || hostIP == " ") || (logStatus == null || logStatus == " ") || (deviceType == null || deviceType == " ") || (logStatus == null || logStatus == " ") || (Get("Device_Criticality") == null || Get("Device_Criticality") == " ") || (Get("Device_State") == null || Get("Device_State") == " ") || (Get("OS_Integrated_Status") == null || Get("OS_Integrated_Status") == " ") || (logDateStr == null || logDateStr == " "))
+            {
+                errors.Add("Field Completeness Error (One or more fields are empty)");
+            }
 
             return errors;
         }
