@@ -154,7 +154,7 @@ namespace Vivaan.Modules.LogsAuto
             DateTime thisDay = DateTime.Today;
 
             // Parse the log string (known to be in d/M/yyyy format)
-            DateTime logDate = DateTime.Parse(logDateStr);
+            DateTime logDate = DateTime.ParseExact(logDateStr, "d/M/yyyy", CultureInfo.InvariantCulture);
 
             // Compare dates directly
             if (logDate.Date != thisDay)
