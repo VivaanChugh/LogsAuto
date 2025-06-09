@@ -168,7 +168,7 @@ namespace Vivaan.Modules.LogsAuto
 
 
             // 12. Field Completeness
-            if ((hostName == null || hostName == " ") || (hostIP == null || hostIP == " ") || (logStatus == null || logStatus == " ") || (deviceType == null || deviceType == " ") || (logStatus == null || logStatus == " ") || (Get("Device_Criticality") == null || Get("Device_Criticality") == " ") || (Get("Device_State") == null || Get("Device_State") == " ") || (Get("OS_Integrated_Status") == null || Get("OS_Integrated_Status") == " ") || (logDateStr == null || logDateStr == " "))
+            if ((hostName == null || hostName == "") || (hostIP == null || hostIP == "") || (logStatus == null || logStatus == "") || (deviceType == null || deviceType == "") || (logStatus == null || logStatus == "") || (Get("Device_Criticality") == null || Get("Device_Criticality") == "") || (Get("Device_State") == null || Get("Device_State") == "") || (Get("OS_Integrated_Status") == null || Get("OS_Integrated_Status") == "") || (logDateStr == null || logDateStr == ""))
             {
                 errors.Add("Field Completeness Error (One or more fields are empty)");
             }
