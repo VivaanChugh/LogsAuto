@@ -21,21 +21,21 @@
 ## 📁 Folder Structure
 
 DesktopModules/
-└── LogsAuto/
-├── View.ascx
-├── View.ascx.cs
-├── View.ascx.resx
-├── Components/
-│ └── LogValidator.cs
-├── Data/
-│ └── DataProvider.cs
-├── Providers/
-│ └── DataProviders/
-│ └── SqlDataProvider/
-│ └── SqlDataProvider.cs
-├── Settings.ascx
-├── ModuleBase.cs
-└── Resources/
+- └── LogsAuto/
+- ├── View.ascx
+- ├── View.ascx.cs
+- ├── View.ascx.resx
+- ├── Components/
+- │ └── LogValidator.cs
+- ├── Data/
+- │ └── DataProvider.cs
+- ├── Providers/
+- │ └── DataProviders/
+- │ └── SqlDataProvider/
+- │ └── SqlDataProvider.cs
+- ├── Settings.ascx
+- ├── ModuleBase.cs
+- └── Resources/
 
 
 
