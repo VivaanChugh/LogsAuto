@@ -110,5 +110,5 @@ This module is proprietary and developed for internal use. Contact the author fo
 
 Vivaan Chugh  
 University of Waterloo  
-Email: [your-email@example.com]
+
 
