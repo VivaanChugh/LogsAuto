@@ -7,7 +7,6 @@ using CsvHelper;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
-
 namespace Vivaan.Modules.LogsAuto
 {
     public partial class View : LogsAutoModuleBase
