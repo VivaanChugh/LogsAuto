@@ -55,6 +55,16 @@ namespace Vivaan.Modules.LogsAuto
                             case "6":
                                 failures = ValidateLogType6(dict);
                                 break;
+
+                            case "7":
+                                failures = ValidateLogType7(dict);
+                                break;
+                            case "8":
+                                failures = ValidateLogType8(dict);
+                                break;
+                            case "9":
+                                failures = ValidateLogType9(dict);
+                                break;
                             default:
                                 failures.Add("Invalid log type selected.");
                                 break;
@@ -220,11 +230,37 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType6(IDictionary<string, object> row)
         {
-            // 🔧 TODO: Add your own validation rules for Log Type 5
+            // 🔧 TODO: Add your own validation rules for Log Type 6
             List<string> errors = new List<string>();
             errors.Add("Log Type 6");
             return errors;
         }
+
+        private List<string> ValidateLogType7(IDictionary<string, object> row)
+        {
+            // 🔧 TODO: Add your own validation rules for Log Type 7
+            List<string> errors = new List<string>();
+            errors.Add("Log Type 7");
+            return errors;
+        }
+
+        private List<string> ValidateLogType8(IDictionary<string, object> row)
+        {
+            // 🔧 TODO: Add your own validation rules for Log Type 8
+            List<string> errors = new List<string>();
+            errors.Add("Log Type 8");
+            return errors;
+        }
+
+        private List<string> ValidateLogType9(IDictionary<string, object> row)
+        {
+            // 🔧 TODO: Add your own validation rules for Log Type 9
+            List<string> errors = new List<string>();
+            errors.Add("Log Type 9");
+            return errors;
+        }
+
+
 
         public class ValidationResult
         {

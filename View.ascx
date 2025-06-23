@@ -11,6 +11,9 @@
         <asp:ListItem Text="Log Type 4" Value="4" />
         <asp:ListItem Text="Log Type 5" Value="5" />
         <asp:ListItem Text="Log Type 6" Value="6" />
+        <asp:ListItem Text="Log Type 7" Value="7" />
+        <asp:ListItem Text="Log Type 8" Value="8" />
+        <asp:ListItem Text="Log Type 9" Value="9" />
     </asp:DropDownList>
 
     <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control dropdown">
