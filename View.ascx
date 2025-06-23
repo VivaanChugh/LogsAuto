@@ -3,6 +3,22 @@
 <div class="logs-auto-container">
     <h2>CSV Log Validator</h2>
 
+    <label for="ddlLogType"><strong>Select Log Type:</strong></label>
+    <asp:DropDownList ID="ddlLogType" runat="server" CssClass="form-control dropdown">
+        <asp:ListItem Text="Log Type 1" Value="1" />
+        <asp:ListItem Text="Log Type 2" Value="2" />
+        <asp:ListItem Text="Log Type 3" Value="3" />
+        <asp:ListItem Text="Log Type 4" Value="4" />
+        <asp:ListItem Text="Log Type 5" Value="5" />
+        <asp:ListItem Text="Log Type 6" Value="6" />
+    </asp:DropDownList>
+
+    <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control dropdown">
+        <asp:ListItem Text="Checking Date" Value="1" />
+        <asp:ListItem Text="Not Checking Date" Value="2" />
+    </asp:DropDownList>
+
+
     <asp:FileUpload ID="fuCsvUpload" runat="server" />
     <asp:Button ID="btnValidate" runat="server" Text="Validate CSV" OnClick="btnValidate_Click" CssClass="btn btn-primary" />
 
@@ -37,7 +53,11 @@
         max-width: 1600px;
     }
 
-    /* Remove Bootstrap collapse behavior and apply visible borders */
+    .dropdown {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
     .validation-grid {
         border-collapse: collapse;
         width: 100%;
