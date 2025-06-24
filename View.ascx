@@ -22,7 +22,7 @@
     </asp:DropDownList>
 
 
-    <asp:FileUpload ID="fuCsvUpload" runat="server" />
+    <asp:FileUpload ID="fuCsvUpload" runat="server" CssClass="btn btn-primary"/>
     <asp:Button ID="btnValidate" runat="server" Text="Validate CSV" OnClick="btnValidate_Click" CssClass="btn btn-primary" />
 
     <br /><br />
@@ -56,14 +56,55 @@
         max-width: 1600px;
     }
 
-    .dropdown {
-        width: 200px;
-        margin-bottom: 10px;
-    }
 
     .validation-grid {
         border-collapse: collapse;
         width: 100%;
+    }
+
+    .dropdown {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 120px;
+        white-space: nowrap;
+    }
+
+
+
+    .btn {
+        padding: 12px 24px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 120px;
+        white-space: nowrap;
+    }
+
+    .btn-primary {
+        background: #2563eb;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #1d4ed8;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
     }
 
     .validation-grid th,
