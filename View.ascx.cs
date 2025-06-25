@@ -138,8 +138,12 @@ namespace Vivaan.Modules.LogsAuto
                 errors.Add($"Device Type/IP Match Error (Device Type = {deviceType}, IP = {hostIP})");
 
             // Log Status Validation
+
             if (logStatus != "Log received")
+            {
                 errors.Add($"Log Status Validity Error (Found: Log Status = {logStatus}, Expected: Log Status = Log received)");
+            }
+
 
             // Device Criticality Validation
             var validCrit = new List<string> { "Low", "Medium", "High", "Critical" };
