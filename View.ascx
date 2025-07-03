@@ -36,7 +36,7 @@
                   AutoGenerateColumns="false"
                   GridLines="Both"
                   ShowHeader="true"
-                  BorderColor="#ccc"
+                  
                   BorderStyle="Solid"
                   BorderWidth="1px"
                   CellPadding="5"
@@ -52,7 +52,7 @@
     .logs-auto-container {
         padding: 20px;
         background-color: #f9f9f9;
-        border: 1px solid #ddd;
+        border: 1px solid;
         border-radius: 6px;
         max-width: 1600px;
     }
@@ -65,7 +65,7 @@
 
     .dropdown {
         padding: 12px 24px;
-        border: none;
+        border: 1px solid;
         border-radius: 8px;
         font-size: 0.875rem;
         font-weight: 600;

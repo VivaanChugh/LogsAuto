@@ -55,7 +55,6 @@ namespace Vivaan.Modules.LogsAuto
                             case "6":
                                 failures = ValidateLogType6(dict);
                                 break;
-
                             case "7":
                                 failures = ValidateLogType7(dict);
                                 break;
@@ -201,7 +200,7 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType2(IDictionary<string, object> row)
         {
-            // TODO: Add your own validation rules for Log Type 2
+   
             List<string> errors = new List<string>();
             errors.Add("Validation for Log Type 2 is not implemented yet.");
             return errors;
@@ -209,7 +208,7 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType3(IDictionary<string, object> row)
         {
-            // TODO: Add your own validation rules for Log Type 3
+         
             List<string> errors = new List<string>();
             errors.Add("Validation for Log Type 3 is not implemented yet.");
             return errors;
@@ -217,7 +216,7 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType4(IDictionary<string, object> row)
         {
-            // TODO: Add your own validation rules for Log Type 4
+         
             List<string> errors = new List<string>();
             errors.Add("Validation for Log Type 4 is not implemented yet.");
             return errors;
@@ -225,7 +224,7 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType5(IDictionary<string, object> row)
         {
-            // TODO: Add your own validation rules for Log Type 5
+        
             List<string> errors = new List<string>();
             errors.Add("Validation for Log Type 5 is not implemented yet.");
             return errors;
@@ -234,7 +233,7 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType6(IDictionary<string, object> row)
         {
-            // Add your own validation rules for Log Type 6
+     
             List<string> errors = new List<string>();
             errors.Add("Log Type 6");
             return errors;
@@ -242,7 +241,7 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType7(IDictionary<string, object> row)
         {
-            // TODO: Add your own validation rules for Log Type 7
+       
             List<string> errors = new List<string>();
             errors.Add("Log Type 7");
             return errors;
@@ -250,7 +249,7 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType8(IDictionary<string, object> row)
         {
-            // TODO: Add your own validation rules for Log Type 8
+      
             List<string> errors = new List<string>();
             errors.Add("Log Type 8");
             return errors;
@@ -258,7 +257,7 @@ namespace Vivaan.Modules.LogsAuto
 
         private List<string> ValidateLogType9(IDictionary<string, object> row)
         {
-            // TODO: Add your own validation rules for Log Type 9
+     
             List<string> errors = new List<string>();
             errors.Add("Log Type 9");
             return errors;
