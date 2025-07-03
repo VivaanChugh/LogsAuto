@@ -111,13 +111,12 @@ namespace Vivaan.Modules.LogsAuto
             string deviceType = Get("Device_Type");
             string logStatus = Get("log_status_24hrs");
 
-            // Host-IP Match Validation 
+        
             if (((hostIP == "10.58.17.20") && (hostName != "SBICSRV04")) || ((hostIP == "10.58.17.19") && (hostName != "SBICSRV03")) || ((hostIP == "10.58.17.109") && (hostName != "SBICSRV02")) || ((hostIP == "10.58.37.37") && (hostName != "SBICSRV07")) || ((hostIP == "10.58.17.34") && (hostName != "SBICSRV11")) || ((hostIP == "10.58.17.33") && (hostName != "SBICSRV12")) || ((hostIP == "10.58.17.32") && (hostName != "SBICSRV01")))
             {
                 errors.Add($"Host-IP Match Error (Found: IP = {hostIP}, Name = {hostName})");
             }
 
-            // Department/IP Match Validation
             if ((department == "FO - Canada") && (!new[] { "10.58.17.20", "10.58.17.19", "10.58.17.109", "10.58.37.37", "10.58.17.34", "10.58.17.33", "10.58.17.32" }.Contains(hostIP)))
             {
                 errors.Add($"Department/IP Match Error (Found: Department = {department}, IP = {hostIP})");
@@ -128,7 +127,6 @@ namespace Vivaan.Modules.LogsAuto
             var Web = new List<string> { "10.58.17.33" };
 
 
-            // Device Type/IP Match Validation
             if (AppServer.Contains(hostIP) && deviceType != "Application_Server")
                 errors.Add($"Device Type/IP Match Error (Device Type = {deviceType}, IP = {hostIP})");
             if (Data.Contains(hostIP) && deviceType != "Database")
@@ -136,7 +134,6 @@ namespace Vivaan.Modules.LogsAuto
             if (Web.Contains(hostIP) && deviceType != "Web_Server")
                 errors.Add($"Device Type/IP Match Error (Device Type = {deviceType}, IP = {hostIP})");
 
-            // Log Status Validation
 
             if (logStatus != "Log received")
             {
@@ -144,7 +141,7 @@ namespace Vivaan.Modules.LogsAuto
             }
 
 
-            // Device Criticality Validation
+         
             var validCrit = new List<string> { "Low", "Medium", "High", "Critical" };
             if (!validCrit.Contains(Get("Device_Criticality")))
                 errors.Add($"Device Criticality Error (Found: {Get("Device_Criticality")}, Expected: Low, Medium, High, or Critical)");
@@ -152,7 +149,7 @@ namespace Vivaan.Modules.LogsAuto
             string deviceState = Get("Device_State");
             string environment = Get("Environment");
 
-            // Device State/Environment Validation
+            
             if (hostName == "SBICSRV07" && (deviceState != "DR-Passive" || environment != "DR"))
                 errors.Add($"Device State/Environment Error for {hostName}");
             else if (hostName != "SBICSRV07" && (deviceState != "DC-Active" || environment != "PR"))
